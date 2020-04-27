@@ -55,7 +55,7 @@ int main( int argc, char ** argv ) {
    msj.tipo = getpid();
    msj.n = 0;
 
-   id = msgget(KEY, IPC_CREAT);
+   id = msgget(KEY, IPC_CREAT | 0600);
 
    terminos = 1000000;
    if ( argc > 1 ) {
