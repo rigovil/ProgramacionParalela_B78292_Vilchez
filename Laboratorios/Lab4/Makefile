@@ -1,0 +1,20 @@
+# Makefile Semana 4
+#
+
+MirrorServerTest: MirrorServerTest.o Socket.o
+	g++ -g MirrorServerTest.o Socket.o -o MirrorServerTest
+
+MirrorClientTest: MirrorClientTest.o Socket.o
+	g++ -g MirrorClientTest.o Socket.o -o MirrorClientTest
+
+Socket.o: Socket.h Socket.cc
+	g++ -g -c Socket.cc
+
+MirrorServerTest.o: MirrorServerTest.cc Socket.h
+	g++ -g -c MirrorServerTest.cc
+
+MirrorClientTest.o: MirrorClientTest.cc Socket.h
+	g++ -g -c MirrorClientTest.cc
+
+# el make proporcionado por el profesor está mal, pero no entiendo por qué aquí el 
+# mirrorClientTest no se crea.
