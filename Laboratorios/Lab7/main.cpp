@@ -3,14 +3,12 @@
 #include <string>
 #include <string.h>
 #include <atomic>
-#include <thread>
 #include <map>
 #include <iostream>
 #include <fstream>
 #include <regex>
 #include "ParserHTML.h"
 
-#define CANTIDAD_HILOS 10
 #define REG_EXPRESSION "(<[^!][^ >]*)"
 
 void ocurrencias();
@@ -18,10 +16,7 @@ void ocurrencias();
 std::map<std::string, std::atomic_int> *etiquetas_HTML;
 
 int main(int argc, char ** argv) {
-
-    
     ParserHTML *parser = new ParserHTML();
-    std::thread hilos[CANTIDAD_HILOS];
 
     std::ifstream input(argv[1]);
     std::string line;
