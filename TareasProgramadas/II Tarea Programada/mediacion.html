@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediación Virtual</title>
+
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+
+<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+  <style>
+    /* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+--- Custom
+*/
+
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 4.2rem; }
+  h3 { font-size: 3.6rem; }
+  h4 { font-size: 3.0rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 1.5rem; }
+}
+
+p {
+  margin-top: 0; }
+
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #114e8f;
+  text-decoration: none;}
+
+a:hover {
+  color: #07203a;
+  text-decoration: underline;
+}
+
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: square inside; }
+ol {
+  list-style: square inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+
+.button {
+  margin-bottom: 0rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+
+/* Estilos heredados de Metics*/
+.hide-block {
+        display: none !important
+    }
+
+    .show-block {
+        display: block !important
+    }
+/*Custom--------------------------------------------------------------------------*/
+
+header {
+        color: #FFF;
+        background: #4172B1;
+    }
+
+    body {
+  background-color:#F2F2F2;
+  font-family: ubuntu;
+}
+
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+  background-color:#ccc;
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: #11DFC7;
+}
+.value-heading {
+  margin-bottom: .3rem;
+}
+.value-description {
+  opacity: .8;
+  font-weight: 300;
+}
+
+/* importante
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.importante {
+  text-align: left;
+  background-color:#FFF;
+  padding-bottom: 5rem;
+}
+.importante-multiplier {
+  margin-bottom: .5rem;
+}
+.importante-heading {
+  margin-bottom: .3rem;
+}
+.importante-description {
+  opacity: .8;
+  font-weight: 300;
+}
+
+/* logos footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.logosfooter{
+  text-align: left;
+  background-color:#323232;
+  padding-bottom: 5rem;
+}
+
+
+/* header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header{
+
+  background-color:#41ade7;
+  height: 100px;
+  padding: 50px 0 0 10px;
+}
+
+/* Logos
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#logos {
+  background-image: url(../img/firma.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 80px;
+}
+
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.categories {
+  background-size: cover;
+  background-color: #07203a;
+  color: #fff;
+}
+.categories .section-description {
+  margin-bottom: 4rem;
+}
+
+/* consultas
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.consultas {
+text-align: left;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 5rem 0 11rem;
+  }
+
+
+  footer{
+    padding: 5rem 0 11rem;
+    margin: 0px auto;
+  }
+
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+
+  .section {
+    padding: 4rem 0 4rem;
+  }
+
+  .section-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .categories {
+    padding: 8rem 0 8rem;
+  }
+
+.header{
+  padding: 50px 0 0 30px;
+}
+
+footer{
+  padding: 8rem 0 8rem;
+  margin: 0px auto;
+}
+
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 5rem 0 5rem;
+  }
+
+
+  footer{
+    padding: 20rem 0 19rem;
+    margin: 0px auto;
+  }
+
+}
+
+
+
+/************************************************************************************
+Footer
+*************************************************************************************/
+
+footer.sub-footer{
+background: #323232;
+border-top: 1px solid #000000;
+height: 50px;
+}
+
+footer .left p{
+color: #fff;
+font-size: 12px;
+margin: 0;
+}
+
+footer a{
+  color: #ffffff; text-decoration: none;
+  font-size: 12px;
+}
+
+footer a:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer .right .logo{
+float: right;
+}
+
+
+/************************************************************************************
+Footer
+*************************************************************************************/
+
+
+footer{
+background-color: #fff;
+padding: 2rem 2rem 2rem;
+margin: 0px auto;
+}
+
+footer h2{
+color: #666;
+
+}
+
+
+
+/************************************************************************************
+NAV
+*************************************************************************************/
+ .navBar{
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  left: 0;
+  background-color: #00344E;
+  width: 100%; /* Full width */
+
+  z-index: 3;
+  overflow: hidden;
+}
+
+/*Floats each item to the left with padding of 14 & 16 px.
+Removes the underline with text decoration = none.*/
+.navBar a{
+  float: left;
+  color: white;
+  padding: 12px 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Tahoma;
+}
+
+/*Background color change during hover state*/
+.navBar a:hover{
+
+  color: #001729;
+}
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.navBar .icon{
+  display: none;
+}
+
+
+
+
+
+</style>
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript">
+    function switchAccordion(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("show-block") == -1) {
+            x.className += " show-block";
+        } else {
+            x.className = x.className.replace(" show-block", "");
+        }
+    }
+  </script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" href="https://medios.ucr.ac.cr/plantillas/ucr_4/imagenes/favicon.png" type="image/png" />
+<link rel="shortcut icon" type="image/x-icon" href="https://medios.ucr.ac.cr/plantillas/ucr_4/imagenes/favicon.ico" />
+</head>
+<body>
+
+
+  <!-- Primary Page Layout
+  ––––––––––––––––––––––––––––––––––––––––––––––––––
+  <section id="hero"></section>
+  <div class="header">
+      <div id="logos"></div>
+  </div>
+-->
+
+<!-- Header ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+        <header>
+        <div>
+            <img src="img/mv.png" alt="" />
+            <hr color=#FFFFFF size=3>
+
+        </div>
+        </header>
+
+
+
+<!-- ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+
+<div class="section categories">
+    <div class="container">
+      <h3 class="section-heading">Hemos aumentado la capacidad y desempeño de la plataforma de Mediación Virtual.</h3>
+      <p class="section-description">Ahora se integra por varias instancias, que distribuyen la carga de cursos y personas usuarias. <br> Para continuar, seleccione el área académica y la unidad a la que pertenece el curso que está buscando, con lo cual se le enviará a la instancia correspondiente. </p>
+
+    </div>
+  </div>
+</section>
+
+
+  <section id="instaladores">
+  <div class="section importante">
+    <div class="container">
+
+<!-- inicio––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+<div class="row">
+    <div class="one-half column">
+      <h3>Importante</h3>
+      <p>Si desea cambiar de curso y no lo encuentra en la instancia en la que está, por favor volver a este sitio y repetir este proceso, puesto que pueden ser cursos de distintas áreas académicas que están en instancias diferentes.</p>
+    </div>
+    <div class="one-half column">
+              <!-- Cursos––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+              <section class="cursos">
+
+                <!-- Artes y Letras -->
+                <h2><button id="header-artes" onclick="switchAccordion('section-artes')">Artes y Letras<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-artes" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Artes Dramáticas</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Artes Musicales</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Artes Plásticas</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Filología, Lingüística y Literatura</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Filosofía</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Lenguas Modernas</a></li>
+                    </ul>
+                </section>
+
+                <!-- Ciencias Agroalimentarias -->
+                <h2><button id="header-agro" onclick="switchAccordion('section-agro')">Ciencias Agroalimentarias<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-agro" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Agronomía</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Economía Agrícola y Agronegocios</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Tecnología de Alimentos</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Zootecnia</a></li>
+                    </ul>
+                </section>
+
+                <!-- Ciencias Basicas -->
+                <h2><button id="header-ciencias" onclick="switchAccordion('section-ciencias')">Ciencias Básicas<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-ciencias" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Biología</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Física</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Geología</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Matemáticas</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Química</a></li>
+                    </ul>
+                </section>
+
+                <!-- Ciencias Sociales -->
+                <h2><button id="header-sociales" onclick="switchAccordion('section-sociales')">Ciencias Sociales<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-sociales" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Derecho</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Administración Educativa</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Formación Docente</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Orientación y Educación Especial</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Bibliotecología y Ciencias de la Información</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Educación Física y Deportes</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Administración de Negocios</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Administración Pública</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Economía</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Estadística</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ciencias de la Comunicación Colectiva</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Psicología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ciencias Políticas</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Trabajo Social</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Historia</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Geografía</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Antropología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Sociología</a></li>
+                    </ul>
+                </section>
+
+                <!-- Estudios de Posgrado -->
+                <h2><button id="header-posgrado" onclick="switchAccordion('section-posgrado')">Estudios de Posgrado<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-posgrado" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Estudios de Posgrado</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Lingüística</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Literatura</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Filosofía</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Artes</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Enseñanza del Inglés</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Español como Segunda Lengua</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Enseñanza del Castellano</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Biología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Física</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Geología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Matemática</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Química</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Doctorado en Ciencias</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Desarrollo Sostenible</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias de la Atmósfera</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Astrofísica</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Gestión Integrada</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Derecho</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias de la Educación</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Administración y Dirección</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Administración Pública</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Estadística</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Psicología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias Políticas</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Historia</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Geografía</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Sociología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Evaluación Educativa</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Evaluación de Programas y Proyectos de Desarrollo</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Doctorado en Educación</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Comunicación</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Planificación Curricular</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Trabajo Social</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Administración Universitaria</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Economía</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Antropología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias del Movimiento</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Bibliotecología y Estudios de la Información</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Gobierno y Políticas Públicas</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Orientación</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Gestión Hotelera</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Educación</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias Agrícolas y Recursos Naturales</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Desarrollo Integrado de Regiones bajo Riesgo</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ingeniería Civil</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ingeniería Eléctrica</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ingeniería Industrial</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ingeniería Química</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Telemática</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Arquitectura</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Computación e Informática</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Doctorado en Sistemas de Producción Agrícola</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Gerencia Agroempresarial</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ingeniería Mecánica</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Especialidades Médicas</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Medicina Legal y Forense</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias Biomédicas</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Salud Pública</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Odontología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Microbiología, Parasitología, Química Clínica e Inmunología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Especialidades de Posgrado en Microbiología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Farmacia</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Estudios Interdiciplinarios</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencia de Alimentos</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Nutrición Humana</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias de la Enfermería</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Especialidad de Posgrado en Odontología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias Médicas</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Ciencias Cognoscitivas</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Gerontología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Doctorado en Estudios de la Sociedad y Cultura</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Gestión Ambiental</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Programa de Posgrado en Estudios de la Mujer</a></li>
+                    </ul>
+                </section>
+
+                <!-- Ingenieria -->
+                <h2><button id="header-ingenieria" onclick="switchAccordion('section-ingenieria')">Ingeniería<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-ingenieria" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ingeniería Civil</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ingeniería Eléctrica</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ingeniería Industrial</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ingeniería Mecánica</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ingeniería Química</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Arquitectura</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ciencias de la Computación e Informática</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ingeniería de Biosistemas</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Ingeniería Topográfica</a></li>
+                    </ul>
+                </section>
+
+                <!-- Salud -->
+                <h2><button id="header-salud" onclick="switchAccordion('section-salud')">Salud<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-salud" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Nutrición</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Enfermería</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Medicina</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Tecnologías en Salud</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Salud Pública</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Odontología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Microbiología</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Farmacia</a></li>
+                    </ul>
+                </section>
+
+                <!-- Sedes Regionales -->
+                <h2><button id="header-sedes" onclick="switchAccordion('section-sedes')">Sedes Regionales<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-sedes" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Sede Regional de Occidente</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Sede Regional del Atlántico</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Sede Regional de Guanacaste</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Sede Regional del Caribe</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Sede Regional del Pacífico</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Sede Regional del Sur</a></li>
+                        <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Sede Interuniversitaria de Alajuela</a></li>
+                    </ul>
+                </section>
+
+                <!-- General -->
+                <h2><button id="header-general" onclick="switchAccordion('section-general')">Sistema de Educación General<span class="icon"> ▾</span>
+                    </button></h2>
+                <section id="section-general" class="hide-block">
+                    <ul>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Estudios Generales</a></li>
+                        <li><a href="https://mv2.mediacionvirtual.ucr.ac.cr" target="_blank">Seminarios de Realidad Nacional</a></li>
+                    </ul>
+                </section>
+
+          <!-- Otras actividades docentes -->
+          <h2><button id="header-inter" onclick="switchAccordion('section-inter')">Otras Actividades Docentes<span class="icon"> ▾</span>
+              </button></h2>
+          <section id="section-inter" class="hide-block">
+              <ul>
+                  <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Centro de Informática</a></li>
+                  <li><a href="https://mv1.mediacionvirtual.ucr.ac.cr" target="_blank">Vicerrectorías</a></li>
+              </ul>
+          </section>
+      </section><!-- cursos -->
+
+
+    </div><!-- fin de div class="two-thirds column" ––––––––––––– -->
+</div> <!-- fin de div class="row" ––––––––––––– -->
+
+
+      </div> <!-- fin de container ––––––––––––– -->
+    </div> <!-- section importante ––––––––––––– -->
+
+</section>
+<!-- REDES––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+<section id="redes">
+    <div class="section consultas">
+        <div class="container">
+
+          <div class="row">
+            <h3>Consultas</h3>
+
+          </div>
+          <div class="row">
+            <div class="one-half column">
+              <p>
+                Para consultas docentes puede escribir a <a href="mailto:consultas.metics@ucr.ac.cr">consultas.metics@ucr.ac.cr</a>;
+                para consultas de soporte a <a href="mailto:soporte.metics@ucr.ac.cr">soporte.metics@ucr.ac.cr</a>;
+                y para dirigirse a la Dirección a <a href="mailto:unidad.metics@ucr.ac.cr">unidad.metics@ucr.ac.cr</a>
+              </p>
+
+
+            </div>
+            <div class="one-half column phones">
+
+
+            <p>
+              Si necesita recuperar su usuario y/o contraseña de ingreso a Mediación Virtual, puede hacerlo desde <a href="https://miperfil.ucr.ac.cr/" target="_blank" rel="noopener noreferrer">https://miperfil.ucr.ac.cr/</a> o escribir a <a href="mailto:ci5000@ucr.ac.cr">ci5000@ucr.ac.cr</a>
+            </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</section>
+
+
+<!-- footer ––––––––––––––––––––––––––––––––––––––––––––––––––  -->
+
+<section id="logosfooter">
+    <div class="section logosfooter">
+        <div class="container">
+
+          <div class="row">
+            <div class="three columns">
+              <img src="img/logos_ucr.png" class="u-img-responsive">
+          </div>
+            <div class="three columns">
+              <img src="img/logos_vd.png" class="u-img-responsive">
+          </div>
+            <div class="three columns">
+              <img src="img/logos_metics.png" class="u-img-responsive">
+          </div>
+
+
+        </div> <!-- fin container  -->
+      </div> <!-- section logosfooter  -->
+
+  </section>
+
+
+
+
+
+<footer class="sub-footer">
+    <div class="container">
+    <div class="eight columns left">
+
+        <p>© Derechos reservados. <a href="ucr.ac.cr">Universidad de Costa Rica.</a><a href="ci.ucr.ac.cr#"> </a></p>
+    </div>
+
+
+</div>
+</footer>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+</body></html>
