@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "chrono.h"
+#include <omp.h>
 
 #define NUM_HILOS 8
 
