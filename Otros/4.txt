@@ -1,0 +1,53 @@
+Agregar(elemento) {
+    vectorHeap;
+    int padre
+    int i = 1 + vectorHeap.ultimaPos   // marca a primera pos desocupada
+    int numElem = vectorHeap.ultimaPos // en vector vacio es 0
+    bool fin = false
+
+    if(numElem != 0) {
+        while(!fin) {
+            if(i % 2 == 0) {
+                padre = i/2
+            }
+            else {
+                padre = (i-1)/2
+            }
+
+            if(elemento < vectorHeap[padre]) {
+                vectorHeap[i] = vectorHeap[padre]
+                i = padre
+            }
+            else {
+                fin = true
+            }
+        }
+    }
+    vectorHeap[i] = elemento
+    ++vectorHeap.ultimaPos;
+}
+
+Borrar(elemento) {
+    vectorHeap;
+    int ultima = vectorHeap.ultimaPos
+    int iElem = Buscar indice del elemento en el vector vectorHeap
+    int hijoIzq = iElem*2
+    int hijoDer = iElem*2 + 1
+    
+    while(hijoDer <= ultima) {
+        if(vector[hijoIzq] <= vector[hijoDer]) {
+            vector[iElem] = vector[hijoIzq]
+            iElem = hijoIzq
+        }
+        else {
+            vector[iElem] = vector[hijoDer]
+            iElem = hijoDer
+        }
+        hijoIzq = iElem*2
+        hijoDer = iElem*2 + 1
+    }
+
+    vector[iElem] = vector[ultima]
+    borrar vector[ultima]
+    --vectorHeap.ultima
+}

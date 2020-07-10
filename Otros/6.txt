@@ -1,0 +1,31 @@
+Prim(Grafo g) {
+    Arreglo costos
+    Arreglo vertices
+    v1 = g.PrimerVertice()
+    Inicializar(v1)     // coloca costos minimos de aristas
+                        // en comparacion con v1
+
+    pivote = encontrarPivote(costos, vertices)
+    // encuentra el pivote, el cual es el vertice
+       con el menor costo del arreglo que no haya sido 
+       pivote todavía //
+
+    while(pivote != nulo) {
+        v2 = g.SiguienteVertice(v1)
+
+        while(v2 != nulo) {
+            if(v2 != pivote) {
+                if(g.ExisteArista(pivote, v2)) {
+                    p = g.Peso(pivote, v2)
+                    if(p < costos[v2]) {
+                        costos[v2] = p
+                        vertices[v2] = pivote
+                        // v2 aca se refiere al indice asociado a v2 //
+                    }
+                }
+            }
+            v2 = g.SiguienteVertice(v2)
+        }
+        pivote = encontrarPivote(costos, vertices)
+    }
+}

@@ -1,0 +1,63 @@
+ComponentesFuertementeConexos(Grafo g) {
+    // I PASO //
+    RPP(g, true)    // recorrido para numerar
+
+    // II PASO //
+    v1 = g.PrimerVertice()
+    while(v1 != verticeNulo) {
+        v2 = g.SiguienteVertice(v1)     
+        while(v2 != vertieNulo) {
+            if(g.ExisteArista(v1, v2)) {
+                if(!g.ExisteArista(v2, v1)) {
+                    Cambiar direccion arista
+                }
+                else {
+                    Intercambiar peso entre las arist. paralelas
+                }
+            }
+            else if(g.ExisteArista(v2, v1) {
+                Cambiar direccion arista
+            }
+            v2 = g.SiguienteVertice(v2);
+        }
+        v1 = g.SiguienteVertice(v1)
+    }
+
+    // III PASO //
+    RPP(g, false)   // recorrido sin numerar
+                    // busca los subgrafos maximales
+
+}
+
+RPP(Grafo g, bool numerar) {
+    Diccionario d
+    Vertice v
+    int i
+
+    if(!g.Vacio()) {
+        v = g.PrimerVertice()
+        while(v != verticeNulo) {
+            if(!d.Pertenece(v)) {
+                RPPR(g, v, d, i, numerar)
+                v = g.SiguienteVertice(v)
+                if(numerar) {
+                    Numerar el vertice v con i++
+                }
+            }
+        }
+    }
+}
+
+RPPR(Grafo g, Vertice v, Diccionario d, bool numerar, int i, bool numerar) {
+    Vertice vAdy
+    vAdy = g.PrimerVerticeAdyacente(v)
+    while(vAdy != verticeNulo) {
+        if(!d.Pertenece(v)) {
+            RPPR(g, vAdy, d, i, numerar)
+            if(numerar) {
+                Numerar el vertice v con i++
+            }
+        }
+        vAdy = g.SiguienteVerticeAdyacente(v, vAdy)
+    }
+}
